@@ -1,0 +1,29 @@
+{
+  "name": "CUITs",
+  "description": "Obtener la información de una CUIT en modo REST",
+  "repository": "https://github.com/heroku/node-js-getting-started",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": [
+    "node",
+    "express",
+    "static",
+    "cuit"
+  ],
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ],
+  "env": {
+    "AUTH_KEY": {
+      "description": "Clave que utilizará en el header Authorization cuando consuma este servicio. Puede utilizar https://onlinehashtools.com/generate-random-md5-hash para generarlo"
+    },
+    "CERT": {
+      "description": "Certificado digital generado para AFIP"
+    },
+    "PRIVATE_KEY": {
+      "description": "Private Key generada para AFIP"
+    }
+  },
+  "scripts": {
+    "predeploy": "npm run build"
+  }
+}
